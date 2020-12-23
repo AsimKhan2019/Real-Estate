@@ -2,9 +2,9 @@ using NUnit.Framework;
 using RealEstate.Core.Assets;
 using RealEstate.Core.Pricers;
 
-namespace RealEstate.Core.Tests
+namespace RealEstate.Core.Tests.Pricers
 {
-    public class Tests
+    public class AssetPricerTests
     {
         [SetUp]
         public void Setup()
@@ -15,7 +15,10 @@ namespace RealEstate.Core.Tests
         public void ComputeAssetRoiTest()
         {
             var asset = new Asset();
-            var roi = asset.GetPricer().ComputeRoi(asset);
+            var pricer = asset.GetPricer();
+            Assert.IsNotNull(pricer);
+            
+            var roi = pricer.ComputeRoi(asset);
             Assert.AreEqual(roi, 0.0);
         }
     }
