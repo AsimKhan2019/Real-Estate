@@ -15,5 +15,8 @@ namespace RealEstate.Core.Assets
         public double Surface { get; set; }
         public double MarketPrice { get; set; }
         public double Rent { get; set; }
+        public double RealEstateTaxes { get; set; }
+        public double PropertyInsurance { get; set; }
+        public double MaintenanceAndRepairs { get; set; }
     }
 }

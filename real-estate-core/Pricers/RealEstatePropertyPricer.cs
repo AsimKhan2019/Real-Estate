@@ -24,5 +24,10 @@ namespace RealEstate.Core.Pricers
         {
             return Property.Rent * 12;
         }
+
+        public override double ComputeYearlyCashOut()
+        {
+            return Property.RealEstateTaxes + Property.PropertyInsurance + Property.MaintenanceAndRepairs;
+        }
     }
 }

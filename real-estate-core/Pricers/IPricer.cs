@@ -9,6 +9,7 @@ namespace RealEstate.Core.Pricers
     {
         public double ComputeRoi();
         public double ComputeYearlyCashIn();
+        public double ComputeYearlyCashOut();
 
     }
 }

@@ -37,5 +37,24 @@ namespace RealEstate.Core.Tests.Pricers
 
             Assert.AreEqual(yearlyCashIn, 1200);
         }
+
+        [Test]
+        public void CashOutTest()
+        {
+            var property = new RealEstateProperty();
+            var pricer = property.GetPricer() as RealEstatePropertyPricer;
+
+            property.RealEstateTaxes = 1;
+            var yearlyCashOut = pricer.ComputeYearlyCashOut();
+            Assert.AreEqual(yearlyCashOut, 1);
+
+            property.PropertyInsurance = 2;
+            yearlyCashOut = pricer.ComputeYearlyCashOut();
+            Assert.AreEqual(yearlyCashOut, 3);
+
+            property.MaintenanceAndRepairs = 5;
+            yearlyCashOut = pricer.ComputeYearlyCashOut();
+            Assert.AreEqual(yearlyCashOut, 8);
+        }
     }
 }

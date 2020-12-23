@@ -24,5 +24,9 @@ namespace RealEstate.Core.Pricers
             return 0.0;
         }
 
+        public virtual double ComputeYearlyCashOut()
+        {
+            return 0.0;
+        }
     }
 }
