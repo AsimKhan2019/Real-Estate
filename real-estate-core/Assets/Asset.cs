@@ -7,9 +7,9 @@ namespace RealEstate.Core.Assets
 {
     public class Asset : IAsset
     {
-        public IPricer GetPricer()
+        public virtual IPricer GetPricer()
         {
-            return new AssetPricer();
+            return new AssetPricer(this);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace RealEstate.Core.Tests.Pricers
             var pricer = asset.GetPricer();
             Assert.IsNotNull(pricer);
             
-            var roi = pricer.ComputeRoi(asset);
+            var roi = pricer.ComputeRoi();
             Assert.AreEqual(roi, 0.0);
         }
     }

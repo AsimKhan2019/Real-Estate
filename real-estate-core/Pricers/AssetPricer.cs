@@ -7,7 +7,15 @@ namespace RealEstate.Core.Pricers
 {
     public class AssetPricer : IPricer
     {
-        public double ComputeRoi(IAsset asset)
+        protected IAsset Asset;
+        public AssetPricer() { }
+
+        public AssetPricer(IAsset asset) 
+        {
+            Asset = asset;
+        }
+
+        public double ComputeRoi()
         {
             return 0.0;
         }

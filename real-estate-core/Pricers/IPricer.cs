@@ -7,6 +7,6 @@ namespace RealEstate.Core.Pricers
 {
     public interface IPricer
     {
-        public double ComputeRoi(IAsset asset);
+        public double ComputeRoi();
     }
 }
