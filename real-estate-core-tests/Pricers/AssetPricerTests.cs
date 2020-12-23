@@ -20,6 +20,9 @@ namespace RealEstate.Core.Tests.Pricers
             
             var roi = pricer.ComputeRoi();
             Assert.AreEqual(roi, 0.0);
+
+            var cashIn = pricer.ComputeYearlyCashIn();
+            Assert.AreEqual(cashIn, 0.0);
         }
     }
 }

@@ -19,5 +19,10 @@ namespace RealEstate.Core.Pricers
         {
             return 0.0;
         }
+        public virtual double ComputeYearlyCashIn()
+        {
+            return 0.0;
+        }
+
     }
 }

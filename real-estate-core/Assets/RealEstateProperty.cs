@@ -14,6 +14,6 @@ namespace RealEstate.Core.Assets
 
         public double Surface { get; set; }
         public double MarketPrice { get; set; }
-
+        public double Rent { get; set; }
     }
 }

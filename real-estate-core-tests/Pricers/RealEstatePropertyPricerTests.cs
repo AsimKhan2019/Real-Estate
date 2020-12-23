@@ -25,5 +25,17 @@ namespace RealEstate.Core.Tests.Pricers
 
             Assert.AreEqual(price, 1e4);
         }
+
+        [Test]
+        public void CashInTest()
+        {
+            var property = new RealEstateProperty();
+            var pricer = property.GetPricer() as RealEstatePropertyPricer;
+
+            property.Rent = 100;
+            var yearlyCashIn = pricer.ComputeYearlyCashIn();
+
+            Assert.AreEqual(yearlyCashIn, 1200);
+        }
     }
 }

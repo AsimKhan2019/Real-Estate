@@ -19,5 +19,10 @@ namespace RealEstate.Core.Pricers
             }
             return Property.MarketPrice / Property.Surface;
         }
+
+        public override double ComputeYearlyCashIn()
+        {
+            return Property.Rent * 12;
+        }
     }
 }
