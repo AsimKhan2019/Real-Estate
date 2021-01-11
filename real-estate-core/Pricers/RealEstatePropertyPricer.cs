@@ -29,5 +29,10 @@ namespace RealEstate.Core.Pricers
         {
             return Property.RealEstateTaxes + Property.PropertyInsurance + Property.MaintenanceAndRepairs;
         }
+
+        public double ComputeVacancyAllowance()
+        {
+            return Property.Rent * 12 * Property.VacancyRate;
+        }
     }
 }

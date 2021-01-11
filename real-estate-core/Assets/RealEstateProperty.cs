@@ -18,5 +18,6 @@ namespace RealEstate.Core.Assets
         public double RealEstateTaxes { get; set; }
         public double PropertyInsurance { get; set; }
         public double MaintenanceAndRepairs { get; set; }
+        public double VacancyRate { get; set; }
     }
 }

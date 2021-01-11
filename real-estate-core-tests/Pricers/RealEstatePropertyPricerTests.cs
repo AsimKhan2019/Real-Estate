@@ -56,5 +56,37 @@ namespace RealEstate.Core.Tests.Pricers
             yearlyCashOut = pricer.ComputeYearlyCashOut();
             Assert.AreEqual(yearlyCashOut, 8);
         }
+
+        [Test]
+        public void VacancyAllowanceTest()
+        {
+            var property = new RealEstateProperty();
+            var pricer = property.GetPricer() as RealEstatePropertyPricer;
+
+            property.Rent = 1600;
+
+            property.VacancyRate = 0.03;
+            var vacancyAllowance = pricer.ComputeVacancyAllowance();
+            Assert.AreEqual(vacancyAllowance, 576);
+        }
+
+        /*[Test]
+        public void BasicIncomeStatementTest()
+        {
+            var property = new RealEstateProperty();
+            var pricer = property.GetPricer() as RealEstatePropertyPricer;
+
+            property.Rent = 400;
+            var gsi = pricer.ComputeGrossScheduledIncome();
+            Assert.AreEqual(yearlyCashIn, 1900);
+
+            property.VacancyRate = 0.03;
+            var goi = pricer.ComputeGrossOperatingIncome();
+            Assert.AreEqual(goi, 18624);
+
+            property.MaintenanceAndRepairs = 5200;
+            var noi = pricer.ComputeNetOperatingIncome();
+            Assert.AreEqual(goi, 13424);
+        }*/
     }
 }
