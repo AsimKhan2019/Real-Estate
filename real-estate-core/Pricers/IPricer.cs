@@ -7,6 +7,8 @@ namespace RealEstate.Core.Pricers
 {
     public interface IPricer
     {
+        public double ComputeAppreciation();
+
         public double ComputeRoi();
         public double ComputeYearlyCashIn();
         public double ComputeYearlyCashOut();

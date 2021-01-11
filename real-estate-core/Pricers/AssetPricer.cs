@@ -19,6 +19,11 @@ namespace RealEstate.Core.Pricers
         {
             return 0.0;
         }
+
+        public double ComputeAppreciation()
+        {
+            return Asset.CurrentValue - Asset.PurchasePrice;
+        }
         public virtual double ComputeYearlyCashIn()
         {
             return 0.0;

@@ -1,0 +1,9 @@
+High :
+	Yearly CashFlow
+
+	Mortgage
+
+
+Medium :
+	Cashflow report
+ 

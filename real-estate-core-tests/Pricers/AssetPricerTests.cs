@@ -24,5 +24,22 @@ namespace RealEstate.Core.Tests.Pricers
             var cashIn = pricer.ComputeYearlyCashIn();
             Assert.AreEqual(cashIn, 0.0);
         }
+
+        [Test]
+        public void ComputeAssetAppreciationTest()
+        {
+            var asset = new Asset();
+            var pricer = asset.GetPricer();
+            Assert.IsNotNull(pricer);
+
+            var appreciation = pricer.ComputeAppreciation();
+            Assert.AreEqual(appreciation, 0.0);
+
+            asset.PurchasePrice = 1000;
+            asset.CurrentValue = 1450;
+            appreciation = pricer.ComputeAppreciation();
+
+            Assert.AreEqual(appreciation, 450);
+        }
     }
 }
