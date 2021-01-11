@@ -7,6 +7,7 @@ namespace RealEstate.Core.Assets
 {
     public class Asset : IAsset
     {
+        public string Name {get;set;}
         public double CurrentValue { get; set; }
 
         public double PurchasePrice { get; set; }

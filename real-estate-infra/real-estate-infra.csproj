@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>RealEstate.Core</RootNamespace>
+    <RootNamespace>RealEstate.Infra</RootNamespace>
   </PropertyGroup>
 
 </Project>
