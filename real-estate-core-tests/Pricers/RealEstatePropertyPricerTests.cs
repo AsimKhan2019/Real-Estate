@@ -70,23 +70,23 @@ namespace RealEstate.Core.Tests.Pricers
             Assert.AreEqual(vacancyAllowance, 576);
         }
 
-        /*[Test]
+        [Test]
         public void BasicIncomeStatementTest()
         {
             var property = new RealEstateProperty();
             var pricer = property.GetPricer() as RealEstatePropertyPricer;
 
-            property.Rent = 400;
+            property.Rent = 1600;
             var gsi = pricer.ComputeGrossScheduledIncome();
-            Assert.AreEqual(yearlyCashIn, 1900);
+            Assert.AreEqual(19200, gsi);
 
             property.VacancyRate = 0.03;
             var goi = pricer.ComputeGrossOperatingIncome();
-            Assert.AreEqual(goi, 18624);
+            Assert.AreEqual(18624, goi);
 
             property.MaintenanceAndRepairs = 5200;
             var noi = pricer.ComputeNetOperatingIncome();
-            Assert.AreEqual(goi, 13424);
-        }*/
+            Assert.AreEqual(13424, noi);
+        }
     }
 }

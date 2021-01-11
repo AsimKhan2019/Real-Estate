@@ -34,5 +34,20 @@ namespace RealEstate.Core.Pricers
         {
             return Property.Rent * 12 * Property.VacancyRate;
         }
+
+        public double ComputeGrossScheduledIncome()
+        {
+            return Property.Rent * 12;
+        }
+
+        public double ComputeGrossOperatingIncome()
+        {
+            return ComputeGrossScheduledIncome() - ComputeVacancyAllowance();
+        }
+
+        public double ComputeNetOperatingIncome()
+        {
+            return ComputeGrossOperatingIncome() - ComputeYearlyCashOut();
+        }
     }
 }
